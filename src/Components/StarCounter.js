@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { icon } from "@fortawesome/fontawesome-svg-core/import.macro";
+import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 const StarCounter = () => {
   const [count, setCount] = useState(5);
   const stars = () => {
     const UpdatedStars = [];
     for (let i = 0; i < count; i++) {
-      UpdatedStars.push(
-        <FontAwesomeIcon
-          key={i}
-          icon={icon({ name: "star", style: "solid" })}
-        />
-      );
+      UpdatedStars.push(<FontAwesomeIcon key={i} icon={faStar} />);
     }
     return <>{UpdatedStars}</>;
   };
